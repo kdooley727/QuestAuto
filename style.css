@@ -67,6 +67,11 @@ header {
     color: var(--main-color);
 }
 
+.logo img {
+    width: 30px;
+    height: 30px;
+}
+
 .navbar {
     display: flex;
     column-gap: 2rem;
@@ -124,6 +129,7 @@ header {
     min-height: 640px;
     display: flex;
     align-items: center;
+    background: url(background-car.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center left;
