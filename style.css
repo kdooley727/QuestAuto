@@ -43,6 +43,11 @@ header {
     z-index: 100;
 }
 
+header.shadow {
+    background: black;
+    box-shadow: 2px;
+}
+
 .nav {
     display: flex;
     align-items: center;
@@ -105,7 +110,6 @@ header {
     box-shadow: 4px 4px 20px rgb(15 54 55 / 10%);
     border: 1px solid var(--main-color);
     border-radius: 0.5rem;
-    clip-path: circle(0% at 100% 0%);
 }
 
 .search-box active {
@@ -151,6 +155,12 @@ header {
     font-size: 0.938rem;
     font-weight: 300;
     margin: 0.5rem 0 1.2rem;
+}
+
+.response-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
 }
 
 .btn {
@@ -255,3 +265,54 @@ btn:hover {
     color: #f6f6f6;
     border-top: 2px solid var(--main-color);
 }
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-container .logo {
+    color: var(--bg-color);
+    margin-bottom: 1rem;
+}
+
+.footer-container .footer-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social a {
+    font-size: 24px;
+    color: var(--bg-color);
+    margin-right: 1rem;
+}
+
+.social a:hover {
+    color: var(--main-color);
+}
+
+.footer-box h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.footer-box a,
+.footer-box p {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.copyright {
+    padding: 20px;
+    text-align: center;
+    color: var(--bg-color);
+    background: var(--main-color);
+}
+
