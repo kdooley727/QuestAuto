@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/************************************
+MAIN
+*************************************/
 *{
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -16,16 +20,12 @@
     --bg-color:   #ffa62f;
 }
 
-section {
-    padding: 4rem 0 2rem;
-}
-
-img {
-    width: 100%;
-}
-
 body {
     color: var(--text-color);
+}
+
+section {
+    padding: 4rem 0 2rem;
 }
 
 .container {
@@ -34,6 +34,22 @@ body {
     margin-right: auto;
 }
 
+.btn {
+    padding: 10px 22px;
+    background: var(--main-color);
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.btn:hover {
+    background: #ffa63e;
+}
+
+img {
+    width: 100%;
+}
+
+/* Header */
 header {
     display: block;
     width: 100%;
@@ -48,20 +64,21 @@ header.shadow {
     box-shadow: 2px;
 }
 
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 35px;
+.heading {
+    text-align: center;
 }
 
-#menu-icon {
-    font-size: 24px;
-    cursor: pointer;
-    color: var(--text-color);
-    display: none;
+.heading span {
+    font-weight: 500;
+    color: var(--main-color);
 }
 
+.heading p {
+    font-size: 0.938rem;
+    font-weight: 300;
+}
+
+/* Logo */
 .logo {
     font-size: 1.7rem;
     font-family: 700;
@@ -75,6 +92,21 @@ header.shadow {
 .logo img {
     width: 30px;
     height: 30px;
+}
+
+/* Nav Bar */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 35px;
+}
+
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+    display: none;
 }
 
 .navbar {
@@ -96,6 +128,7 @@ header.shadow {
     border-bottom: 3px solid var(--main-color);
 }
 
+/* Search */
 #search-icon {
     font-size: 24px;
     cursor: pointer;
@@ -132,6 +165,9 @@ header.shadow {
     font-size: 1rem;    
 }
 
+/************************************
+HOME PAGE
+*************************************/
 .home {
     max-width: 1300px;
     margin: auto;
@@ -169,31 +205,7 @@ header.shadow {
     margin: auto;
 }
 
-.btn {
-    padding: 10px 22px;
-    background: var(--main-color);
-    color: var(--bg-color);
-    font-weight: 400;
-}
-
-btn:hover {
-    background: #ffa63e;
-}
-
-.heading {
-    text-align: center;
-}
-
-.heading span {
-    font-weight: 500;
-    color: var(--main-color);
-}
-
-.heading p {
-    font-size: 0.938rem;
-    font-weight: 300;
-}
-
+/* Car Container */
 .cars-container {
     display: flex;
     flex-wrap: wrap;
@@ -237,6 +249,7 @@ btn:hover {
     color: var(--main-color);
 }
 
+/* About Container */
 .about {
     display: flex;
     flex-wrap: wrap;
@@ -266,6 +279,7 @@ btn:hover {
     margin: 0.5rem 0 1.4rem;
 }
 
+/* Footer Container */
 .footer {
     background: var(--text-color);
     color: #f6f6f6;
@@ -288,6 +302,7 @@ btn:hover {
     flex-direction: column;
 }
 
+/* Social Container */
 .social {
     display: flex;
     align-items: center;
@@ -303,6 +318,73 @@ btn:hover {
     color: var(--main-color);
 }
 
+/************************************
+CAR LISTING
+*************************************/
+.carList {
+    position: relative;
+    padding-top: 10%;
+}
+
+.carList-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.carList-container .box{
+    flex: 1 1 21rem;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: #c0c0c0;
+    border-radius: 0.5rem;
+    color:#000000;
+}
+
+.carList-container .box img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 1-rem;
+}
+
+.carList-container .box h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.carList-container .box span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #6A0136;
+}
+
+.carList-container .box .btn {
+    max-width: 120px;
+    text-align: center;
+}
+
+.carList-container .box .details {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 1.8rem;
+    right: 1rem;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.carList-container .box .details:hover {
+    color: #6A0136;
+    text-decoration: underline;
+}
+
+/************************************
+FOOTER
+*************************************/
 .footer-box h3 {
     font-size: 1.1rem;
     font-weight: 400;
