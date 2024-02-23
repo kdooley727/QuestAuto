@@ -64,25 +64,13 @@ header.shadow {
     box-shadow: 2px;
 }
 
-.heading {
-    text-align: center;
-}
-
-.heading span {
-    font-weight: 500;
-    color: var(--main-color);
-}
-
-.heading p {
-    font-size: 0.938rem;
-    font-weight: 300;
-}
-
 /* Logo */
 .logo {
     font-size: 1.7rem;
     font-family: 700;
     color: var(--text-color);
+    display: flex;
+    padding-right: 15px;
 }
 
 .logo span {
@@ -205,6 +193,25 @@ HOME PAGE
     margin: auto;
 }
 
+/* Heading Container */
+.heading {
+    text-align: center;
+}
+
+.heading span {
+    font-weight: 500;
+    color: var(--main-color);
+    font-size: 1.9rem;
+}
+.heading h1 {
+    font-size: 1.5rem;
+}
+
+.heading p {
+    font-size: 0.938rem;
+    font-weight: 300;
+}
+
 /* Car Container */
 .cars-container {
     display: flex;
@@ -268,10 +275,11 @@ HOME PAGE
 .about-text span {
     font-weight: 500;
     color: var(--main-color);
+    font-size: 1.9rem;
 }
 
 .about-text h2 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 }
 
 .about-text p {
@@ -279,28 +287,7 @@ HOME PAGE
     margin: 0.5rem 0 1.4rem;
 }
 
-/* Footer Container */
-.footer {
-    background: var(--text-color);
-    color: #f6f6f6;
-    border-top: 2px solid var(--main-color);
-}
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-.footer-container .logo {
-    color: var(--bg-color);
-    margin-bottom: 1rem;
-}
-
-.footer-container .footer-box {
-    display: flex;
-    flex-direction: column;
-}
 
 /* Social Container */
 .social {
@@ -333,7 +320,7 @@ CAR LISTING
     margin-top: 2rem;
 }
 .carList-container .box{
-    flex: 1 1 21rem;
+    flex: 1 1 17rem;
     position: relative;
     padding: 20px;
     display: flex;
@@ -385,6 +372,29 @@ CAR LISTING
 /************************************
 FOOTER
 *************************************/
+.footer {
+    background: var(--text-color);
+    color: var(--main-color);
+    border-top: 1px solid var(--main-color);
+    padding: 1rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-container .logo {
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.footer-container .footer-box {
+    display: flex;
+    flex-direction: column;
+}
+
 .footer-box h3 {
     font-size: 1.1rem;
     font-weight: 400;
@@ -398,9 +408,9 @@ FOOTER
 }
 
 .copyright {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
-    color: var(--bg-color);
+    color: #000000;
     background: var(--main-color);
 }
 
