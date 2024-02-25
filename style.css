@@ -378,17 +378,6 @@ ABOUT PAGE
     color: black;
 }
 
-/*.aboutus-container .box {
-    flex: 1 1 17rem;
-    position: relative;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    background: #c0c0c0;
-    border-radius: 0.5rem;
-    color: #000000;
-}*/
-
 .aboutus-container .box .details {
     display: flex;
     align-items: center;
