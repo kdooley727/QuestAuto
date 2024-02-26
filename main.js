@@ -5,7 +5,6 @@ let search = document.querySelector('.search-box');
 let searchIcon = document.querySelector('#search-icon');
 
 // Select the response container
-// Select the response container
 let responseContainer = document.querySelector('#response-container');
 
 let brandSearchInput = document.querySelector('#brand-search');
