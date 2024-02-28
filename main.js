@@ -38,6 +38,7 @@
 
 
 // Select the search box element
+// Select the search box element
 let search = document.querySelector('.search-box');
 
 // Select the search icon element
@@ -47,6 +48,9 @@ let searchIcon = document.querySelector('#search-icon');
 let responseContainer = document.querySelector('#response-container');
 
 let brandSearchInput = document.querySelector('#brand-search');
+let modelSearchInput = document.querySelector('#model-search');
+let regionSearchInput = document.querySelector('#region-search');
+let conditionSearchInput = document.querySelector('#condition-search');
 
 // Add a click event listener to the search icon
 searchIcon.addEventListener('click', () => {
@@ -55,7 +59,11 @@ searchIcon.addEventListener('click', () => {
 
     if (search.classList.contains('active')) {
         const brand = brandSearchInput.value.trim().toLowerCase(); // Get the brand from the input and convert to lowercase
-        const url = `https://cis-automotive.p.rapidapi.com/getBrands?brand=${brand}`; // Include the brand in the URL
+        const model = modelSearchInput.value.trim().toLowerCase(); // Get the model from the input and convert to lowercase
+        const region = regionSearchInput.value.trim().toLowerCase(); // Get the region from the input and convert to lowercase
+        const condition = conditionSearchInput.value.trim().toLowerCase(); // Get the condition from the input and convert to lowercase
+
+        const url = `https://cis-automotive.p.rapidapi.com/getVehicles?brand=${brand}&model=${model}&region=${region}&condition=${condition}`; // Include the search fields in the URL
 
         const options = {
             method: 'GET',
@@ -72,10 +80,10 @@ searchIcon.addEventListener('click', () => {
                 responseContainer.innerHTML = '';
 
                 // Loop through the data
-                data.forEach(brand => {
-                    // Create a new paragraph element for each brand
+                data.forEach(vehicle => {
+                    // Create a new paragraph element for each vehicle
                     let p = document.createElement('p');
-                    p.textContent = brand.name; // Assuming the brand object has a 'name' property
+                    p.textContent = `${vehicle.brand} ${vehicle.model} - ${vehicle.region} - ${vehicle.condition}`;
 
                     // Append the paragraph to the response container
                     responseContainer.appendChild(p);
