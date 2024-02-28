@@ -79,18 +79,27 @@ searchIcon.addEventListener('click', () => {
                 // Clear the response container
                 responseContainer.innerHTML = '';
 
-                // Loop through the data
-                data.forEach(vehicle => {
-                    // Create a new paragraph element for each vehicle
-                    let p = document.createElement('p');
-                    p.textContent = `${vehicle.brand} ${vehicle.model} - ${vehicle.region} - ${vehicle.condition}`;
+                // Check if data is an array
+                if (Array.isArray(data)) {
+                    // Loop through the data
+                    data.forEach(vehicle => {
+                        // Create a new paragraph element for each vehicle
+                        let p = document.createElement('p');
+                        p.textContent = `${vehicle.brand} ${vehicle.model} - ${vehicle.region} - ${vehicle.condition}`;
 
-                    // Append the paragraph to the response container
+                        // Append the paragraph to the response container
+                        responseContainer.appendChild(p);
+                    });
+                } else {
+                    // If data is not an array, create a paragraph with the data
+                    let p = document.createElement('p');
+                    p.textContent = data.toString(); // Convert data to string
                     responseContainer.appendChild(p);
-                });
+                }
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
             });
+
     }
 });
