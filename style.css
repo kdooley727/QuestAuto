@@ -116,42 +116,44 @@ header.shadow {
     border-bottom: 3px solid var(--main-color);
 }
 
-/* Search */
-#search-icon {
-    font-size: 24px;
-    cursor: pointer;
-    color: var(--bg-color);
+/* Search box */
+.search-box {
+    position: relative;
+    margin-top: 20px;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    padding: 5px 40px 5px 10px; /* Increase right padding to accommodate the icon */
+    width: 100%;
 }
 
-.search-box {
-    position: absolute;
-    top: 110%;
-    right: 0;
-    left: 0;
-    background: var(--bg-color);
-    box-shadow: 4px 4px 20px rgb(15 54 55 / 10%);
-    border: 1px solid #000000;
-    border-radius: 0.5rem;
-    opacity: 75%;
-}
+/* Search input */
+    .search-box input[type="search"] {
+        width: 100%;
+        border: none;
+        background: none;
+        outline: none;
+        font-size: 16px;
+    }
+
+    /* Search button */
+    .search-box button {
+        padding: 8px 15px; /* Adjust padding */
+        margin-left: 10px; /* Add space between input and button */
+        border: none;
+        border-radius: 5px;
+        background-color: var(--main-color); /* Button color */
+        color: white;
+        cursor: pointer;
+    }
+
+        /* Hover effect for button */
+        .search-box button:hover {
+            background-color: #0056b3; /* Darker shade of button color */
+        }
 ::placeholder {
     color: #000000;
-  }
-
-.search-box active {
-    clip-path: circle(144% at 100% 0%);
-    transition: 0.4s;
-    color: #000000;
-} 
-
-.search-box input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 1rem;    
 }
+
 
 /************************************
 HOME PAGE

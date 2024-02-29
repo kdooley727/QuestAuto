@@ -1,8 +1,8 @@
 // Select the search box element
 let search = document.querySelector('.search-box');
 
-// Select the search icon element
-let searchIcon = document.querySelector('#search-icon');
+// Select the search button element
+let searchButton = document.querySelector('#search-button');
 
 // Select the response container
 let responseContainer = document.querySelector('#response-container');
@@ -56,8 +56,8 @@ async function fetchRegions() {
     }
 }
 
-// Add a click event listener to the search icon
-searchIcon.addEventListener('click', () => {
+// Add a click event listener to the search button
+searchButton.addEventListener('click', () => {
     // Toggle the 'active' class on the search box
     search.classList.toggle('active');
 
