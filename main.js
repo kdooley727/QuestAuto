@@ -13,45 +13,39 @@ let regionSearchInput = document.querySelector('#region-search');
 let conditionSearchInput = document.querySelector('#condition-search');
 
 // Function to fetch models
-async function fetchModels(brandName, condition) {
-    const options = {
-        method: 'GET',
-        url: 'https://cis-automotive.p.rapidapi.com/getModels',
-        params: {
-            brandName: brandName,
-            condition: condition
-        },
-        headers: {
-            'X-RapidAPI-Key': 'f93b096e20msh06729fb32d55626p128c2bjsn645b069521a7',
-            'X-RapidAPI-Host': 'cis-automotive.p.rapidapi.com'
-        }
+// Function to fetch models from the auto.dev API
+async function fetchModels(brandName, regionName, condition) {
+    const url = 'https://auto.dev/api/models';
+    const params = {
+        brand: brandName,
+        region: regionName,
+        condition: condition
+    };
+    const headers = {
+        'Authorization': 'Bearer ZrQEPSkKa2Rvb2xleTA3MjdAZ21haWwuY29t'
     };
 
     try {
-        const response = await axios.request(options);
+        const response = await axios.get(url, { params, headers });
         return response.data;
     } catch (error) {
-        console.error(error);
+        console.error('Error fetching models:', error);
         return null;
     }
 }
 
-// Function to fetch regions
+// Function to fetch regions from the auto.dev API
 async function fetchRegions() {
-    const options = {
-        method: 'GET',
-        url: 'https://cis-automotive.p.rapidapi.com/getRegions',
-        headers: {
-            'X-RapidAPI-Key': 'f93b096e20msh06729fb32d55626p128c2bjsn645b069521a7',
-            'X-RapidAPI-Host': 'cis-automotive.p.rapidapi.com'
-        }
+    const url = 'https://auto.dev/api/regions';
+    const headers = {
+        'Authorization': 'Bearer ZrQEPSkKa2Rvb2xleTA3MjdAZ21haWwuY29t'
     };
 
     try {
-        const response = await axios.request(options);
+        const response = await axios.get(url, { headers });
         return response.data;
     } catch (error) {
-        console.error(error);
+        console.error('Error fetching regions:', error);
         return null;
     }
 }
