@@ -1,3 +1,6 @@
+// Import the reserveCar function from reserve.js
+import { reserveCar } from './reserveFunctionality.js'; 
+
 // Select the search box element
 let search = document.querySelector('.search-box');
 
@@ -78,3 +81,7 @@ searchButton.addEventListener('click', () => {
             });
     }
 });
+
+// Call reserveCar to attach event listeners to reserve buttons
+document.addEventListener('DOMContentLoaded', reserveCar);
+
