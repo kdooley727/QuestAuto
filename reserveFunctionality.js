@@ -1,12 +1,26 @@
+// reserve.js
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Select all reserve buttons
     const reserveButtons = document.querySelectorAll('.btn');
+    const modal = document.getElementById('reservationModal');
+    const closeButton = document.querySelector('.close-button');
 
     reserveButtons.forEach(button => {
         button.addEventListener('click', (event) => {
-            event.preventDefault(); // Prevents the default anchor action
-            // Display a confirmation message
-            alert('The car has been reserved.');
+            event.preventDefault();
+            modal.style.display = 'block'; // Show the modal
         });
     });
+
+    // When the user clicks on <span> (x), close the modal
+    closeButton.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
 });
