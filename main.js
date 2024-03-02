@@ -1,5 +1,5 @@
 function handleSearch() {
-    const makeName = document.getElementById('make-search').value;
+    const make = document.getElementById('make-search').value;
   
     // Fetch data based on search query
     fetch(`http://questapi.zapto.org:8080/${make}`)
