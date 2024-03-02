@@ -22,17 +22,17 @@ function handleSearch() {
 document.getElementById('search-button').addEventListener('click', handleSearch);
  */
 
-fetch('http://questapi.zapto.org:8080/${makeName}')
+fetch(`http://questapi.zapto.org:8080/${makeName}`)
   .then(response => response.json())
   .then(data => {
-    // Use the fetched data in your website
     console.log(data);
+    // Update your website with the fetched data here
   })
   .catch(error => {
     console.error('Error fetching data:', error);
   });
 
-  fetch('http://questapi.zapto.org:8080/${makeName}', {
+fetch(`http://questapi.zapto.org:8080/${makeName}`, {
   method: 'PUT',
   headers: {
     'Content-Type': 'application/json'
