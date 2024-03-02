@@ -7,6 +7,8 @@
     <!--Link To Stlye Sheets-->
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="viewDetailsFunctionality.js"></script>
+    <script src="reserveFunctionality.js"></script>
 </head>
 <body>
     <!--NavBar-->
@@ -49,7 +51,7 @@
                 <h3>Car Name Here</h3>
                 <span>$00,000.00</span>
                 <button class="btn">Reserve</button>
-                <a href="#" class="details">View Details</a>
+                <a class="detailsLink" data-id="c1">View Details</a>
             </div>
             <!--Car Box 2-->
             <div class="box">
@@ -57,7 +59,7 @@
                 <h3>Car Name Here</h3>
                 <span>$00,000.00</span>
                 <button class="btn">Reserve</button>
-                <a href="#" class="details">View Details</a>
+                <a class="detailsLink" data-id="c2">View Details</a>
             </div>
             <!--Car Box 3-->
             <div class="box">
@@ -65,7 +67,7 @@
                 <h3>Car Name Here</h3>
                 <span>$00,000.00</span>
                 <button class="btn">Reserve</button>
-                <a href="#" class="details">View Details</a>
+                <a class="detailsLink" data-id="c3">View Details</a>
             </div>
             <!--Car Box 4-->
             <div class="box">
@@ -73,7 +75,7 @@
                 <h3>Car Name Here</h3>
                 <span>$00,000.00</span>
                 <button class="btn">Reserve</button>
-                <a href="#" class="details">View Details</a>
+                <a class="detailsLink" data-id="c4">View Details</a>
             </div>
             <!--Car Box 5-->
             <div class="box">
@@ -81,7 +83,7 @@
                 <h3>Car Name Here</h3>
                 <span>$00,000.00</span>
                 <button class="btn">Reserve</button>
-                <a href="#" class="details">View Details</a>
+                <a class="detailsLink" data-id="c5">View Details</a>
             </div>
             <!--Car Box 6-->
             <div class="box">
@@ -89,10 +91,26 @@
                 <h3>Car Name Here</h3>
                 <span>$00,000.00</span>
                 <button class="btn">Reserve</button>
-                <a href="#" class="details">View Details</a>
+                <a class="detailsLink" data-id="c6">View Details</a>
             </div>
         </div>
     </section>
+    
+    <!-- View Details Modal -->
+    <div id="viewDetailsModal" class="detailsModal">
+        <div class="detailsModal-content" >
+            <span class="detailsCloseButton">&times;</span>
+            <h2></h2>
+            <img src="" alt="">
+            <h1></h1>
+            <p></p>
+            <br>
+            <h3>Features:</h3>
+            <ul></ul>
+            <br>
+            <button class="btn">Reserve</button>
+        </div>
+    </div>
 
     <!-- Reservation Modal -->
 <div id="reservationModal" class="modal">
