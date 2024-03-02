@@ -354,7 +354,7 @@ CAR LISTING
     text-align: center;
 }
 
-.carList-container .box .details {
+.carList-container .box .detailsLink {
     display: flex;
     align-items: center;
     position: absolute;
@@ -368,6 +368,45 @@ CAR LISTING
     color: #6A0136;
     text-decoration: underline;
 }
+
+/***********************************************************************/
+.detailsModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .detailsModal-content {
+    background-color: #333; /* Existing style */
+    color: #fff; /* Existing style */
+    margin: 15% auto; /* Existing style */
+    padding: 20px; /* Existing style */
+    border: 1px solid #888; /* Existing style */
+    width: 60%; /* Existing style */
+    text-align: left; /* left alignss all the text inside the modal */
+  }
+
+  /* The Close Button for better visibility */
+  .detailsCloseButton {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .detailsCloseButton:hover,
+  .detailsCloseButton:focus {
+    color: #fff; /* Lighter color for hover/focus */
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 /************************************
 CONFIRMATION MODAL
