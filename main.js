@@ -2,7 +2,7 @@
 function handleSearch() {
     const makeName = document.getElementById('make-search').value;
     
-    fetch(`http://34.125.79.155/${makeName}`)
+    fetch(`https://questapi.zapto.org/${makeName}`)
         .then(response => response.json())
         .then(data => {
             console.log('Cars:', data);
