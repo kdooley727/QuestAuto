@@ -2,7 +2,11 @@
 function handleSearch() {
     const makeName = document.getElementById('make-search').value;
     
+<<<<<<< HEAD
     fetch(`http://34.125.79.155${makeName}`)
+=======
+    fetch(`http://questapi.zapto.org/${makeName}`)
+>>>>>>> refs/remotes/origin/main
         .then(response => response.json())
         .then(data => {
             console.log('Cars:', data);
