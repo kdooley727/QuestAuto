@@ -2,7 +2,7 @@ function handleSearch() {
     const makeName = document.getElementById('make-search').value;
   
     // Fetch data based on search query
-    fetch(`http://questapi.zapto.org:8080/${makeName}`)
+    fetch(`http://questapi.zapto.org:8080/${make}`)
       .then(response => response.json())
       .then(data => {
         console.log(data);
@@ -15,7 +15,7 @@ function handleSearch() {
       });
   
     // Example of a PUT request (you can remove this if not needed)
-    fetch(`http://questapi.zapto.org:8080/${makeName}`, {
+    fetch(`http://questapi.zapto.org:8080/${make}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
