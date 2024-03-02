@@ -1,8 +1,8 @@
-/* app.use((req, res, next) => {
+app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
 });
-
+/* 
 // Function to handle search based on input value
 function handleSearch() {
     const makeName = document.getElementById('make-search').value;
