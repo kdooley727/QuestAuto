@@ -36,4 +36,4 @@ function handleSearch() {
   
   // Add event listener to search button
   document.getElementById('search-button').addEventListener('click', handleSearch);
-  
+

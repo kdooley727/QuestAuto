@@ -28,7 +28,7 @@ async function fetchBrandData(searchInput, responseContainer) {
   }
 }
 
-// Toggles 'active' class on a search element for UI/styling purposes
+// Toggles 'active' class on a search element for UI styling purposes
 function toggleSearchActive(search) {
   search.classList.toggle('active');
 }

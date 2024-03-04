@@ -1,5 +1,4 @@
-// reserve.js
-
+// Implement Reserve
 document.addEventListener('DOMContentLoaded', () => {
     const reserveButtons = document.querySelectorAll('.btn');
     const modal = document.getElementById('reservationModal');
